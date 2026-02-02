@@ -1,0 +1,51 @@
+# Chezmoi .gitignore - Filter sensitive files
+
+# Claude/OpenClaw configuration (contains API keys)
+.claude.json
+
+# SSH keys (never commit)
+.ssh/
+
+# GPG keys
+.gnupg/
+
+# macOS specific
+.DS_Store
+.Spotlight-V100
+.Trashes
+.fseventsd
+._*
+
+# Shell history
+.zsh_history
+.bash_history
+.python_history
+.node_repl_history
+
+# Zsh cache files
+.zcompdump*
+.zwc
+
+# Vim swap files
+*.swp
+*.swo
+
+# IDE/Editor configs (optional - can be committed if needed)
+.idea/
+.vscode/
+*.code-workspace
+
+# Cookie/Session files
+.cookies
+.netrc
+
+# Cache directories
+.cache/
+npm/
+.yarn/
+.bun/
+
+# Environment files (secrets)
+.env
+.env.local
+.env.*.local
