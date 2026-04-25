@@ -7,3 +7,6 @@ source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 # Added by Toolbox App
 export PATH="$PATH:/Users/kina/Library/Application Support/JetBrains/Toolbox/scripts"
 
+# >>> Nowledge Mem PATH >>>
+export PATH="$HOME/.local/bin:$PATH"
+# <<< Nowledge Mem PATH <<<

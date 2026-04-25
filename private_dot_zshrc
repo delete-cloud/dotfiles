@@ -124,5 +124,34 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
+
+__openclaw_lazy_completion_loaded=0
+_openclaw_lazy_load_completion() {
+  (( __openclaw_lazy_completion_loaded )) && return 0
+  __openclaw_lazy_completion_loaded=1
+
+  local cache_dir="${XDG_CACHE_HOME:-$HOME/Library/Caches}/zsh/openclaw"
+  mkdir -p "$cache_dir"
+  local cache_file="$cache_dir/completion.zsh"
+
+  if [[ ! -s "$cache_file" ]]; then
+  fi
+  source "$cache_file" 2>/dev/null || true
+}
+# 在补全系统启动后，第一次触发补全前加载
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd _openclaw_lazy_load_completion
+
+
+# >>> zim completion dumpfile (added by script)
+mkdir -p "$HOME/Library/Caches/zsh"
+zstyle ":zim:completion" dumpfile "$HOME/Library/Caches/zsh/.zcompdump"
+# <<< zim completion dumpfile (added by script)
+
 # OpenClaw Completion
-source <(openclaw completion --shell zsh)
+source "/Users/kina/.openclaw/completions/openclaw.zsh"
+export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
+export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
+export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
+export PATH="$HOME/.cargo/bin:$PATH"

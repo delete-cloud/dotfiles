@@ -1,3 +1,5 @@
 [user]
 	email = kiakiana0630@gmail.com
 	name = kina0630
+[safe]
+	directory = *

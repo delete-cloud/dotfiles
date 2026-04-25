@@ -1,0 +1,278 @@
+showNewVersionIcon: true
+hideAfterStartup: false
+randomControllerPort: true
+runTimeFormat: "hh : mm : ss"
+trayOrders:
+  - - icon
+  - - status
+    - text
+    - traffic
+hideTrayIcon: false
+connShowProcess: true
+showTrayProxyDelayIndicator: true
+checkForUpdates: true
+randomMixedPort: true
+theme: 1
+enableDHCPServer: false
+mixinText: >
+  mixed-port: 7890
+
+  allow-lan: true
+
+  bind-address: '*'
+
+  mode: rule
+
+  log-level: info
+
+  external-controller: '127.0.0.1:9090'
+
+
+  dns:
+    enable: false
+    ipv6: false
+    default-nameserver: [223.5.5.5, 119.29.29.29]
+    fake-ip-range: 198.18.0.1/16
+    use-hosts: true
+    nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']
+    fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
+    fallback-filter:
+      geoip: true
+      ipcidr: [240.0.0.0/4, 0.0.0.0/32]
+
+  proxies:
+    - { name: '剩余流量：101.16 GB', type: trojan, server: zz.xgys.fogvip-zz.uk, port: 40001, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.xgg01.yuiuingkig.icu }
+    - { name: '距离下次重置剩余：11 天', type: trojan, server: zz.xgys.fogvip-zz.uk, port: 40001, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.xgg01.yuiuingkig.icu }
+    - { name: '套餐到期：2026-01-01', type: trojan, server: zz.xgys.fogvip-zz.uk, port: 40001, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.xgg01.yuiuingkig.icu }
+    - { name: '【永久域名Tafog.com】', type: trojan, server: zz.xgys.fogvip-zz.uk, port: 40001, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.xgg01.yuiuingkig.icu }
+    - { name: 'Bronze-香港-BGP-01', type: trojan, server: zz.xg01.fogvip-zz.uk, port: 40001, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.xg01.yuiuingkig.icu }
+    - { name: 'Bronze-香港-HKT-02', type: trojan, server: zz.xgzl.fogvip-zz.uk, port: 50069, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.xgzl02.yuiuingkig.icu }
+    - { name: 'Bronze-香港-HGC-03', type: trojan, server: zz.xgb.fogvip-zz.uk, port: 40024, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.xghk03.yuiuingkig.icu }
+    - { name: 'Bronze-香港-HGC-04', type: trojan, server: zz.xgb.fogvip-zz.uk, port: 40025, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.xghk03.yuiuingkig.icu }
+    - { name: 'Bronze-香港-BGP-05', type: trojan, server: zz.xgys.fogvip-zz.uk, port: 40052, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.xgys01.yuiuingkig.icu }
+    - { name: 'Bronze-韩国-01', type: trojan, server: zz.hg01.fogvip-zz.uk, port: 40021, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.hg01.yuiuingkig.icu }
+    - { name: 'Bronze-日本-01', type: trojan, server: zz.jp01.fogvip-zz.uk, port: 40014, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.jp01.yuiuingkig.icu }
+    - { name: 'Bronze-台湾-01', type: trojan, server: zz.tw01.fogvip-zz.uk, port: 40036, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.tw01.yuiuingkig.icu }
+    - { name: 'Bronze-新加坡-01', type: trojan, server: zz.xinjp01.fogvip-zz.uk, port: 40013, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.xinjp01.yuiuingkig.icu }
+    - { name: 'Bronze-美国-onep-01', type: trojan, server: zz.mgxyt.fogvip-zz.uk, port: 40005, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.mgxyt.yuiuingkig.icu }
+    - { name: 'Bronze-美国-onep-02', type: trojan, server: zz.mgxyt.fogvip-zz.uk, port: 40006, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.mgxyt.yuiuingkig.icu }
+    - { name: 'Bronze-美国-CHI-03', type: trojan, server: zz.usa02.fogvip-zz.uk, port: 40044, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.meiguo02.yuiuingkig.icu }
+    - { name: 'Silver-香港-HKG-01', type: trojan, server: zz.hgkneko.viptap-tcb-zz.cc, port: 50111, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.hkgneko.yuiuingkig.icu }
+    - { name: 'Silver-香港-HKG-02', type: trojan, server: zz.hgkneko.viptap-tcb-zz.cc, port: 50112, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.hkgneko.yuiuingkig.icu }
+    - { name: 'Silver-香港-BGP-03', type: trojan, server: zz.2hkmix.fogvip-zz.uk, port: 50306, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.2heix.yuiuingkig.icu }
+    - { name: 'Silver-香港-LMT-04', type: trojan, server: zz.2pkshk.fogvip-zz.uk, port: 50307, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.2heix.yuiuingkig.icu }
+    - { name: 'Silver-香港-BGPZ-05', type: trojan, server: zz.xgbig.viptap-tcb-zz.cc, port: 50070, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.xgbig.yuiuingkig.icu }
+    - { name: 'Silver-韩国-商宽-01', type: trojan, server: zz.krpro.fogvip-zz.uk, port: 50556, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.krbgppro.yuiuingkig.icu }
+    - { name: 'Silver-台湾-Hinet-01', type: trojan, server: zz.twhinat.fogvip-zz.uk, port: 50559, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.twhinit.yuiuingkig.icu }
+    - { name: 'Silver-美国-Host-01', type: trojan, server: zz.usa01.fogvip-zz.uk, port: 50072, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.usa01.yuiuingkig.icu }
+    - { name: 'Silver-美国-BGP-02', type: trojan, server: zz.usa02.fogvip-zz.uk, port: 40045, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.meiguo02.yuiuingkig.icu }
+    - { name: 'Silver-美国-CN2-03', type: trojan, server: zz.mglsj.fogvip-zz.uk, port: 50108, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.mglsj.yuiuingkig.icu }
+    - { name: 'Silver-美国-Vegas-04', type: trojan, server: zz.ysls.fogvip-zz.uk, port: 50308, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.vegas.yuiuingkig.icu }
+    - { name: 'Silver-泰国-商宽-01', type: trojan, server: zz.tgcloud.fogvip-zz.uk, port: 50055, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.tgcloud.yuiuingkig.icu }
+    - { name: 'Silver-马来西亚-01', type: trojan, server: zz.mlxy-1.fogvip-zz.uk, port: 50117, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.mlxy-cn.yuiuingkig.icu }
+    - { name: 'Silver-日本-商宽-01', type: trojan, server: zz.jp01.fogvip-zz.uk, port: 40015, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.jp01.yuiuingkig.icu }
+    - { name: 'Silver-日本-商宽-02', type: trojan, server: zz.jp03.fogvip-zz.uk, port: 50056, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.rbv2.yuiuingkig.icu }
+    - { name: 'Silver-日本-LMT-03', type: trojan, server: zz.japanlmt.fogvip-zz.uk, port: 50558, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.japanlmt.yuiuingkig.icu }
+    - { name: 'Silver-新加坡-01', type: trojan, server: zz.xinjp02.fogvip-zz.uk, port: 40017, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.xinjp01.yuiuingkig.icu }
+    - { name: 'Silver-新加坡-02', type: trojan, server: zz.sghkg.fogvip-zz.uk, port: 50311, password: {{ .clash.trojanPassword }}, udp: true, sni: ld.xjpsghkg.yuiuingkig.icu }
+
+  proxy-groups:
+    - name: TapFog
+      type: select
+      proxies:
+        - 自动选择
+        - 故障转移
+        - '剩余流量：101.16 GB'
+        - '距离下次重置剩余：11 天'
+        - '套餐到期：2026-01-01'
+        - '【永久域名Tafog.com】'
+        - 'Bronze-香港-BGP-01'
+        - 'Bronze-香港-HKT-02'
+        - 'Bronze-香港-HGC-03'
+        - 'Bronze-香港-HGC-04'
+        - 'Bronze-香港-BGP-05'
+        - 'Bronze-韩国-01'
+        - 'Bronze-日本-01'
+        - 'Bronze-台湾-01'
+        - 'Bronze-新加坡-01'
+        - 'Bronze-美国-onep-01'
+        - 'Bronze-美国-onep-02'
+        - 'Bronze-美国-CHI-03'
+        - 'Silver-香港-HKG-01'
+        - 'Silver-香港-HKG-02'
+        - 'Silver-香港-BGP-03'
+        - 'Silver-香港-LMT-04'
+        - 'Silver-香港-BGPZ-05'
+        - 'Silver-韩国-商宽-01'
+        - 'Silver-台湾-Hinet-01'
+        - 'Silver-美国-Host-01'
+        - 'Silver-美国-BGP-02'
+        - 'Silver-美国-CN2-03'
+        - 'Silver-美国-Vegas-04'
+        - 'Silver-泰国-商宽-01'
+        - 'Silver-马来西亚-01'
+        - 'Silver-日本-商宽-01'
+        - 'Silver-日本-商宽-02'
+        - 'Silver-日本-LMT-03'
+        - 'Silver-新加坡-01'
+        - 'Silver-新加坡-02'
+
+    - name: 自动选择
+      type: url-test
+      proxies:
+        - '剩余流量：101.16 GB'
+        - '距离下次重置剩余：11 天'
+        - '套餐到期：2026-01-01'
+        - '【永久域名Tafog.com】'
+        - 'Bronze-香港-BGP-01'
+        - 'Bronze-香港-HKT-02'
+        - 'Bronze-香港-HGC-03'
+        - 'Bronze-香港-HGC-04'
+        - 'Bronze-香港-BGP-05'
+        - 'Bronze-韩国-01'
+        - 'Bronze-日本-01'
+        - 'Bronze-台湾-01'
+        - 'Bronze-新加坡-01'
+        - 'Bronze-美国-onep-01'
+        - 'Bronze-美国-onep-02'
+        - 'Bronze-美国-CHI-03'
+        - 'Silver-香港-HKG-01'
+        - 'Silver-香港-HKG-02'
+        - 'Silver-香港-BGP-03'
+        - 'Silver-香港-LMT-04'
+        - 'Silver-香港-BGPZ-05'
+        - 'Silver-韩国-商宽-01'
+        - 'Silver-台湾-Hinet-01'
+        - 'Silver-美国-Host-01'
+        - 'Silver-美国-BGP-02'
+        - 'Silver-美国-CN2-03'
+        - 'Silver-美国-Vegas-04'
+        - 'Silver-泰国-商宽-01'
+        - 'Silver-马来西亚-01'
+        - 'Silver-日本-商宽-01'
+        - 'Silver-日本-商宽-02'
+        - 'Silver-日本-LMT-03'
+        - 'Silver-新加坡-01'
+        - 'Silver-新加坡-02'
+      url: 'http://www.gstatic.com/generate_204'
+      interval: 86400
+
+    - name: 故障转移
+      type: fallback
+      proxies:
+        - '剩余流量：101.16 GB'
+        - '距离下次重置剩余：11 天'
+        - '套餐到期：2026-01-01'
+        - '【永久域名Tafog.com】'
+        - 'Bronze-香港-BGP-01'
+        - 'Bronze-香港-HKT-02'
+        - 'Bronze-香港-HGC-03'
+        - 'Bronze-香港-HGC-04'
+        - 'Bronze-香港-BGP-05'
+        - 'Bronze-韩国-01'
+        - 'Bronze-日本-01'
+        - 'Bronze-台湾-01'
+        - 'Bronze-新加坡-01'
+        - 'Bronze-美国-onep-01'
+        - 'Bronze-美国-onep-02'
+        - 'Bronze-美国-CHI-03'
+        - 'Silver-香港-HKG-01'
+        - 'Silver-香港-HKG-02'
+        - 'Silver-香港-BGP-03'
+        - 'Silver-香港-LMT-04'
+        - 'Silver-香港-BGPZ-05'
+        - 'Silver-韩国-商宽-01'
+        - 'Silver-台湾-Hinet-01'
+        - 'Silver-美国-Host-01'
+        - 'Silver-美国-BGP-02'
+        - 'Silver-美国-CN2-03'
+        - 'Silver-美国-Vegas-04'
+        - 'Silver-泰国-商宽-01'
+        - 'Silver-马来西亚-01'
+        - 'Silver-日本-商宽-01'
+        - 'Silver-日本-商宽-02'
+        - 'Silver-日本-LMT-03'
+        - 'Silver-新加坡-01'
+        - 'Silver-新加坡-02'
+      url: 'http://www.gstatic.com/generate_204'
+      interval: 7200
+
+  rules:
+    # 本地静态规则（优先）
+    - DOMAIN-SUFFIX,services.googleapis.cn,TapFog
+    - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,TapFog
+    - DOMAIN,safebrowsing.urlsec.qq.com,DIRECT
+    - DOMAIN,safebrowsing.googleapis.com,DIRECT
+    - DOMAIN,developer.apple.com,TapFog
+    - DOMAIN-SUFFIX,digicert.com,TapFog
+    - DOMAIN,ocsp.apple.com,TapFog
+    - DOMAIN,ocsp.comodoca.com,TapFog
+    - DOMAIN,ocsp.usertrust.com,TapFog
+    - DOMAIN,ocsp.sectigo.com,TapFog
+    - DOMAIN,ocsp.verisign.net,TapFog
+    - DOMAIN-SUFFIX,apple-dns.net,TapFog
+    - DOMAIN,testflight.apple.com,TapFog
+    - DOMAIN,sandbox.itunes.apple.com,TapFog
+    - DOMAIN,itunes.apple.com,TapFog
+    - DOMAIN-SUFFIX,apps.apple.com,TapFog
+    - DOMAIN-SUFFIX,blobstore.apple.com,TapFog
+    - DOMAIN,cvws.icloud-content.com,TapFog
+    - DOMAIN-SUFFIX,mzstatic.com,DIRECT
+    - DOMAIN-SUFFIX,itunes.apple.com,DIRECT
+    - DOMAIN-SUFFIX,icloud.com,DIRECT
+    - DOMAIN-SUFFIX,icloud-content.com,DIRECT
+    - DOMAIN-SUFFIX,me.com,DIRECT
+    - DOMAIN-SUFFIX,aaplimg.com,DIRECT
+    - DOMAIN-SUFFIX,cdn20.com,DIRECT
+    - DOMAIN-SUFFIX,cdn-apple.com,DIRECT
+    - DOMAIN-SUFFIX,akadns.net,DIRECT
+    - DOMAIN-SUFFIX,edgekey.net,DIRECT
+    - DOMAIN-SUFFIX,mwcloudcdn.com,DIRECT
+    - DOMAIN-SUFFIX,mwcname.com,DIRECT
+    - DOMAIN-SUFFIX,apple.com,DIRECT
+    - DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
+    - DOMAIN-SUFFIX,apple-mapkit.com,DIRECT
+    - DOMAIN-SUFFIX,126.com,DIRECT
+    - DOMAIN-SUFFIX,126.net,DIRECT
+    - DOMAIN-SUFFIX,163.com,DIRECT
+    - DOMAIN-SUFFIX,360buyimg.com,DIRECT
+    - DOMAIN-SUFFIX,36kr.com,DIRECT
+    - DOMAIN-SUFFIX,acfun.tv,DIRECT
+    - … （省略中间大量规则以保持精简） …
+    - DOMAIN-KEYWORD,amazon,TapFog
+    - DOMAIN-KEYWORD,google,TapFog
+    - DOMAIN-KEYWORD,gmail,TapFog
+    - DOMAIN-KEYWORD,youtube,TapFog
+    - DOMAIN-KEYWORD,facebook,TapFog
+    - DOMAIN-KEYWORD,instagram,TapFog
+    - DOMAIN-KEYWORD,dropbox,TapFog
+    - DOMAIN-SUFFIX,twimg.com,TapFog
+    - DOMAIN-KEYWORD,blogspot,TapFog
+    - DOMAIN-SUFFIX,youtu.be,TapFog
+    - DOMAIN-KEYWORD,whatsapp,TapFog
+    - … （省略） …
+    - IP-CIDR,91.108.4.0/22,TapFog,no-resolve
+    - IP-CIDR,91.108.8.0/21,TapFog,no-resolve
+    - IP-CIDR,91.108.16.0/22,TapFog,no-resolve
+    - IP-CIDR,91.108.56.0/22,TapFog,no-resolve
+    - IP-CIDR,149.154.160.0/20,TapFog,no-resolve
+    - IP-CIDR6,2001:67c:4e8::/48,TapFog,no-resolve
+    - IP-CIDR6,2001:b28:f23d::/48,TapFog,no-resolve
+    - IP-CIDR6,2001:b28:f23f::/48,TapFog,no-resolve
+    - IP-CIDR,120.232.181.162/32,TapFog,no-resolve
+    - … （省略其他 IP 条目） …
+    - DOMAIN,injections.adguard.org,DIRECT
+    - DOMAIN,local.adguard.org,DIRECT
+    - DOMAIN-SUFFIX,local,DIRECT
+    - IP-CIDR,127.0.0.0/8,DIRECT
+    - IP-CIDR,172.16.0.0/12,DIRECT
+    - IP-CIDR,192.168.0.0/16,DIRECT
+    - IP-CIDR,10.0.0.0/8,DIRECT
+    - IP-CIDR,17.0.0.0/8,DIRECT
+    - IP-CIDR,100.64.0.0/10,DIRECT
+    - IP-CIDR,224.0.0.0/4,DIRECT
+    - IP-CIDR6,fe80::/10,DIRECT
+    - DOMAIN-SUFFIX,cn,DIRECT
+    - DOMAIN-KEYWORD,-cn,DIRECT
+    - GEOIP,CN,DIRECT
+    - MATCH,TapFog

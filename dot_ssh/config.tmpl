@@ -1,0 +1,28 @@
+# Added by OrbStack: 'orb' SSH host for Linux machines
+# This only works if it's at the top of ssh_config (before any Host blocks).
+# This won't be added again if you remove it.
+Include ~/.orbstack/ssh/config
+
+Host connect.bjb1.seetacloud.com
+  HostName {{ .ssh.seetacloud.hostname }}
+  Port {{ .ssh.seetacloud.port }}
+  User {{ .ssh.seetacloud.user }}
+
+Host {{ .ssh.wps.hostname }}
+  Port {{ .ssh.wps.port }}
+  User {{ .ssh.wps.user }}
+
+Host tencent
+  HostName {{ .ssh.tencent.hostname }}
+  User {{ .ssh.tencent.user }}
+  IdentityFile {{ .ssh.tencent.identityFile }}
+  IdentitiesOnly yes
+
+Host hk-netbird
+  HostName {{ .ssh.hk_netbird.hostname }}
+  Port {{ .ssh.hk_netbird.port }}
+  User {{ .ssh.hk_netbird.user }}
+  IdentityFile {{ .ssh.hk_netbird.identityFile }}
+  IdentitiesOnly yes
+  ServerAliveInterval 30
+  ServerAliveCountMax 3
