@@ -18,6 +18,19 @@ Host tencent
   IdentityFile {{ .ssh.tencent.identityFile }}
   IdentitiesOnly yes
 
+Host kina-o6n
+  HostName 100.123.220.136
+  User kina
+  ServerAliveInterval 30
+  ServerAliveCountMax 3
+
+Host kina-o6n-fallback
+  HostName 100.123.220.136
+  User kina
+  ProxyJump hk-netbird
+  ServerAliveInterval 30
+  ServerAliveCountMax 3
+
 Host hk-netbird
   HostName {{ .ssh.hk_netbird.hostname }}
   Port {{ .ssh.hk_netbird.port }}
